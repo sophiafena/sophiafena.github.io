@@ -20,8 +20,8 @@ h1{font-size:clamp(40px,7vw,84px);font-weight:700;letter-spacing:-.035em;line-he
 .card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .25s,border-color .25s}
 .card:hover,.card:focus-visible{transform:translateY(-4px);border-color:var(--accent);outline:none}
 .thumb{aspect-ratio:4/3;overflow:hidden;background:var(--surface-2)}
-.thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.card:hover .thumb img{transform:scale(1.04)}
+.thumb img,.thumb video{display:block;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}
+.card:hover .thumb img,.card:hover .thumb video{transform:scale(1.04)}
 .body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:6px}
 .body h2{font-size:24px;font-weight:600;letter-spacing:-.015em;display:flex;justify-content:space-between;align-items:center;gap:12px}
 .body h2 span{color:var(--accent);transition:transform .25s}
@@ -36,16 +36,16 @@ footer{padding:32px clamp(16px,5vw,64px);color:var(--muted);font-size:14px;text-
 <main>
   <p class="kicker">Portfolio</p>
   <h1>Sophia Lattermann</h1>
-  <p class="lead">Designer for interactive products and games. Choose a portfolio:</p>
+  <p class="lead">Designer for interactive products and games.</p>
 
   <div class="choices">
     <a class="card" href="ux/">
-      <div class="thumb"><img src="img/ux.jpg" alt="Preview of the UX, graphic and motion design portfolio"></div>
-      <div class="body"><h2>UX, Graphic &amp; Motion Design <span aria-hidden="true">→</span></h2><p>Product design, case studies, motion and illustration.</p></div>
+      <div class="thumb"><video src="img/ux.mp4" poster="img/ux-poster.jpg" autoplay muted loop playsinline aria-label="Preview of the UX, graphic and motion design portfolio: member section client portal"></video></div>
+      <div class="body"><h2>UX, Graphic &amp; Motion Design <span aria-hidden="true">→</span></h2><p>Product design, case studies, motion and vector illustrations.</p></div>
     </a>
     <a class="card" href="portfolio/">
       <div class="thumb"><img src="img/game.jpg" alt="Preview of the game art portfolio"></div>
-      <div class="body"><h2>Game Art <span aria-hidden="true">→</span></h2><p>Illustrated icons, pixel art and 3D.</p></div>
+      <div class="body"><h2>Game Art <span aria-hidden="true">→</span></h2><p>Digital art, hand-painted icons, pixel art and 3D.</p></div>
     </a>
   </div>
 </main>
